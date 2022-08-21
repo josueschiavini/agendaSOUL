@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda SOUL</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <style>
+        .textoDeletado{
+            text-decoration: line-through;
+        } 
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Agenda SOUL</h1>
+            </div>
+        </div>
+        <div id="functionAtendimento" class="row my-2 mx-1 py-2 border rounded border-success">
+            <div class="col-12">
+                <form action="" id="formAtendimento">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>Formulário</h2>
+                        </div>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <label for="nomeEvento" class="form-label">Atendimento</label>
+                            <select name="nomeEvento" id="Atendimento" class="form-control">
+                                <option selected>Reiki</option>
+                                <option value="Atendimento Fraterno">Atendimento Fraterno</option>
+                                <option value="Atendimento Espiritual">Atendimento Espiritual</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label for="nomePessoa" class="form-label">Nome</label>
+                            <input type="text" name="nomePessoa" id="Pessoa" class="form-control">
+                        </div>
+                        <div class="col-12">
+                            <label for="Idade" class="form-label">Idade</label>
+                            <input type="text" name="Idade" id="Idade" class="form-control">
+                        </div>
+                        <div class="col-12">
+                            <label for="Endereco" class="form-label">Endereço</label>
+                            <input type="text" name="Endereco" id="Endereco" class="form-control">
+                        </div>
+                        <div class="col-12">
+                            <label for="esCivil" class="form-label">Estado Civil</label>
+                            <select name="esCivil" id="eCivil" class="form-control">
+                                <option selected>Solteiro(a)</option>
+                                <option value="Casado">Casado(a)</option>
+                                <option value="Divorciado">Divorciado(a)</option>
+                                <option value="Viuvo">Viúvo(a)</option>
+                            </select>
+                        </div>
+                        <div class="div-col-12">
+                            <div id="mensagemErro" class="alert alert-danger d-none" role="alert">
+                                Mensagem
+                            </div>
+                        </div>
+                        <div class="col-6"><button type="button" class="btn btn-danger w-100"
+                                id="botaoLimpar">Limpar</button></div>
+                        <div class="col-6"><button type="submit" class="btn btn-primary w-100">Salvar</button></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h2>
+                    Atendimentos
+                </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Atendimento</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Idade</th>
+                            <th scope="col">Endereço</th>
+                            <th scope="col">Estado civil</th>
+                            <th scope="col">Data</th>
+                            <th scope="col">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabelaAtendimentos"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="agenda.js"></script>
+</body>
+
+</html>
